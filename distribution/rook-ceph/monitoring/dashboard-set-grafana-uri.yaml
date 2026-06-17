@@ -8,6 +8,8 @@ metadata:
 spec:
   template:
     spec:
+      securityContext:
+        runAsNonRoot: true
       initContainers:
       - name: config-init
         image: rook/ceph:master
